@@ -651,10 +651,18 @@
 		<Compiler>
 			<Add directory="." />
 		</Compiler>
+		<Unit filename="Adb.cpp" />
+		<Unit filename="Adb.h" />
 		<Unit filename="ArduinoApp.ino">
 			<Option compile="1" />
 			<Option link="1" />
 		</Unit>
+		<Unit filename="ch9.h" />
+		<Unit filename="max3421e.cpp" />
+		<Unit filename="max3421e.h" />
+		<Unit filename="max3421e_constants.h" />
+		<Unit filename="usb.cpp" />
+		<Unit filename="usb.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />
