@@ -15,33 +15,147 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="1" column="0">
-     <widget class="QLabel" name="datavalue">
-      <property name="font">
-       <font>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
+    <item row="16" column="0">
+     <widget class="QPushButton" name="sendButton">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>48</height>
+       </size>
       </property>
       <property name="text">
-       <string>0</string>
+       <string>Send</string>
       </property>
      </widget>
     </item>
     <item row="2" column="0">
-     <widget class="QProgressBar" name="progressBar">
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>32</height>
-       </size>
-      </property>
-      <property name="value">
-       <number>24</number>
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
       </property>
      </widget>
     </item>
-    <item row="3" column="0">
+    <item row="5" column="0">
+     <widget class="Line" name="line_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Digital Write&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="0">
+     <widget class="Line" name="line_3">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Digital Read&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QComboBox" name="pinMode">
+        <item>
+         <property name="text">
+          <string>Digital 0</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 5</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 6</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 7</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 8</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 9</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 10</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 11</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 12</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 13</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="pinModeValue">
+        <item>
+         <property name="text">
+          <string>INPUT</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>OUTPUT</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="15" column="0">
      <spacer name="verticalSpacer">
       <property name="orientation">
        <enum>Qt::Vertical</enum>
@@ -55,9 +169,282 @@
      </spacer>
     </item>
     <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="connection_label">
+        <property name="text">
+         <string>Connection:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="green_light">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="resource.qrc">:/graphics/green_light.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="7" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QComboBox" name="digitalWrite">
+        <item>
+         <property name="text">
+          <string>Digital 0</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 5</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 6</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 7</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 8</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 9</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 10</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 11</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 12</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 13</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="digitalWriteValue">
+        <item>
+         <property name="text">
+          <string>LOW</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>HIGH</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="13" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <widget class="QComboBox" name="AnalogRead">
+        <item>
+         <property name="text">
+          <string>Analog 0</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Analog 1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Analog 2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Analog 3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Analog 4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Analog 5</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="AnalogReadValue">
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="10" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QComboBox" name="digitalRead">
+        <item>
+         <property name="text">
+          <string>Digital 0</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 5</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 6</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 7</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 8</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 9</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 10</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 11</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 12</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Digital 13</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="digitalReadValue">
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="0">
      <widget class="QLabel" name="label">
       <property name="text">
-       <string>Data received:</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Pin Mode&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="0">
+     <widget class="Line" name="line_4">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="0">
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Analog Read&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="0">
+     <widget class="QProgressBar" name="progressBar">
+      <property name="value">
+       <number>24</number>
       </property>
      </widget>
     </item>
@@ -65,6 +452,8 @@
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

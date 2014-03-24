@@ -22,5 +22,6 @@ FORMS    += mainwindow.ui
 CONFIG += mobility
 MOBILITY = 
 
-RESOURCES +=
+RESOURCES += \
+    resource.qrc
 

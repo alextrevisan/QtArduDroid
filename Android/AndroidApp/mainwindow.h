@@ -24,7 +24,9 @@ private:
 private slots:
     void newConnection();
     void readyRead();
+    void disconnect();
 
+    void on_sendButton_clicked();
 };
 
 #endif // MAINWINDOW_H
